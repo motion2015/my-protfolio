@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'post', // fetch할때 sanityClient.fetch(`*[_type == "post]{
+  title: 'Post', //http://localhost:3333/desk/post 메뉴중content의 title
   type: 'document',
   fields: [
     {
@@ -30,12 +30,6 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
       name: 'publishedAt',
